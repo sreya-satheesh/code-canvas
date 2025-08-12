@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 50% 98%; /* #f9f7fc */
+    --foreground: 260 30% 25%; /* #4a3e5c */
+
+    --card: 260 50% 98%;
+    --card-foreground: 260 30% 25%;
+
+    --popover: 260 50% 98%;
+    --popover-foreground: 260 30% 25%;
+
+    --primary: 265 49% 64%; /* #a276d1 */
+    --primary-foreground: 255 100% 99%;
+
+    --secondary: 265 30% 75%; /* #b5a0cc */
+    --secondary-foreground: 260 30% 25%;
+
+    --muted: 260 30% 90%; /* #e1dbe8 */
+    --muted-foreground: 260 30% 45%;
+
+    --accent: 265 40% 92%; /* #e8e1f0 */
+    --accent-foreground: 260 30% 25%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 30% 88%; /* #ddd5e5 */
+    --input: 260 30% 92%; /* #e8e2ee */
+    --ring: 265 49% 64%;
+
+    --shadow-light: theme(colors.white / 60%);
+    --shadow-dark: theme(colors.slate.400 / 30%);
+  }
+
+  .dark {
+    --background: 240 10% 15%; /* #212126 */
+    --foreground: 240 15% 85%; /* #d4d4d9 */
+
+    --card: 240 10% 15%;
+    --card-foreground: 240 15% 85%;
+
+    --popover: 240 10% 15%;
+    --popover-foreground: 240 15% 85%;
+
+    --primary: 260 80% 70%; /* #9966ff */
+    --primary-foreground: 240 10% 15%;
+
+    --secondary: 260 40% 50%; /* #664d99 */
+    --secondary-foreground: 240 15% 85%;
+
+    --muted: 240 10% 25%; /* #3a3a40 */
+    --muted-foreground: 240 15% 65%;
+
+    --accent: 240 10% 22%; /* #313138 */
+    --accent-foreground: 240 15% 85%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 25%; /* #3a3a40 */
+    --input: 240 10% 20%; /* #2b2b30 */
+    --ring: 260 80% 70%;
+
+    --shadow-light: theme(colors.white / 8%);
+    --shadow-dark: theme(colors.black / 40%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .neumorphic {
+    @apply rounded-xl bg-background shadow-[5px_5px_10px_var(--shadow-dark),-5px_-5px_10px_var(--shadow-light)] transition-all duration-200;
+  }
+
+  .neumorphic-inset {
+    @apply rounded-xl bg-background shadow-[inset_5px_5px_10px_var(--shadow-dark),inset_-5px_-5px_10px_var(--shadow-light)] transition-all duration-200;
+  }
+  
+  .neumorphic-flat {
+     @apply rounded-xl bg-background shadow-[2px_2px_4px_var(--shadow-dark),-2px_-2px_4px_var(--shadow-light)] transition-all duration-200;
+  }
+
+  .neumorphic-button {
+    @apply neumorphic;
+  }
+  .neumorphic-button:hover {
+    @apply shadow-[3px_3px_6px_var(--shadow-dark),-3px_-3px_6px_var(--shadow-light)];
+  }
+  .neumorphic-button:active {
+    @apply neumorphic-inset;
+  }
+}
