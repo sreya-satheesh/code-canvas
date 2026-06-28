@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="text-center p-4 text-sm text-muted-foreground">
-        <p>Created with ❤️ by <a href="https://github.com/sreya-satheesh" target="_blank">Sreya Satheesh</a></p>
+        <p>Built with ❤️ by Sreya</p>
       </footer>
     </div>
   );
