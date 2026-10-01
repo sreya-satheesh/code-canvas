@@ -17,7 +17,7 @@ With a split-screen interface, you can **read tutorials** on one side and **writ
 
 ## Live Demo
 
-https://code-canvas-ebon.vercel.app/
+https://code-canvas-v2-ruby.vercel.app/
 
 ---
 
